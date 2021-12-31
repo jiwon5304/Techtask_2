@@ -16,7 +16,17 @@ class StackTestCase(unittest.TestCase):
         self.assertEqual(s.display(), [1,2,3,4])
 
     def test_stack_pop(self):
-        pass
+        s = Stack()
+        s.push(1)
+        s.push(2)
+        s.pop()
+
+        self.assertEqual(s.display(), [1])
 
     def test_stack_peek(self):
-        pass
+        s = Stack()
+        s.push(1)
+        s.push(2)
+        s.peek()
+
+        self.assertEqual(s.display(), [2])

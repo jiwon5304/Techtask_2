@@ -14,14 +14,18 @@ class Stack:
         self.stack: list[InputType] = []
 
     def push(self, data: InputType) -> None:
-        pass
+        self.stack.append(data)
+        return self.stack
 
     def pop(self) -> None:
-        pass
+        self.stack.pop()
+        return self.stack
 
     def display(self) -> list[InputType]:
         return self.stack
 
     def peek(self) -> InputType:
-        pass
+        return self.stack[-1]
+
+
 

@@ -8,24 +8,28 @@
     - back: 제일 뒤에 있는 값을 보여준다
 '''
 from typing import Union
+from collections import deque
 
 InputType = Union[int, str, float]
 
+queue = deque()
 class Queue:
     def __init__(self) -> None:
         self.queue: list[InputType] = []
 
     def enqueue(self, data: InputType) -> None:
-        pass
+        self.queue.append(data)
+        return self.queue
 
     def dequeue(self) -> None:
-        pass
+        self.queue.popleft()
+        return self.queue
 
     def display(self) -> list[InputType]:
         return self.queue
 
     def front(self) -> InputType:
-        pass
+        return self.queue[1]
 
     def back(self) -> InputType:
-        pass
+        return self.queue[-1]
